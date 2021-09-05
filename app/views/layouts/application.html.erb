@@ -14,17 +14,7 @@
     <main>
       <div class="container">
         <div class="sidebar">
-          <h2>Menu</h2>
-          <ul>
-            <li>
-              <i class="fas fa-book"></i>
-              <a href="https://qiita.com/Broccolingual">Qiita</a>
-            </li>
-            <li>
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/broccolingual">Github</a>
-            </li>
-          </ul>
+          <%= render "layouts/sidebar" %>
         </div>
         <div class="contents">
           <%= yield %>
