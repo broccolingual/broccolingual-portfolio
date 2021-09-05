@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Broccolingual</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+    <main>
+      <div class="container">
+        <div class="sidebar">
+          <h2>Menu</h2>
+          <ul>
+            <li>
+              <i class="fas fa-book"></i>
+              <a href="https://qiita.com/Broccolingual">Qiita</a>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/broccolingual">Github</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contents">
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+    <%= render "layouts/footer" %>
+  </body>
+</html>
