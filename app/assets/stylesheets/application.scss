@@ -197,4 +197,25 @@ footer {
   a {
     color: #262626;
   }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  p.body {
+  }
+  p.created-at {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  .edit-menu {
+    > a.edit {
+      color: #666;
+    }
+    > a.delete {
+      color: crimson;
+    }
+  }
 }

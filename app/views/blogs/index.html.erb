@@ -1,8 +1,0 @@
-<% @blogs.each do |blog| %>
-  <div class="article">
-    <%= link_to blog_path(blog) do %>
-      <h2><%= blog.title %></h2>
-      <p>Body：<%= blog.body %></p>
-    <% end %>
-  </div>
-<% end %>

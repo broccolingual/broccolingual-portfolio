@@ -1,8 +1,13 @@
 <div class="article">
   <h2><%= @blog.title %></h2>
-  <p>Body：<%= @blog.body %></p>
-  <p>投稿日時：<%= @blog.created_at.strftime('%Y/%m/%d') %></p>
-  <% if @blog.user == current_user %>
-    <%= link_to "削除", blog_path(@blog), method: :delete %>
-  <% end %>
+  <p class="body"><%= @blog.body %></p>
+  <p class="created-at"><%= @blog.created_at.strftime('%Y/%m/%d') %></p>
+  
+  <div class="edit-menu">
+    <% if @blog.user == current_user %>
+      <%= link_to "編集", edit_blog_path(@blog), class: "edit" %>
+      |
+      <%= link_to "削除", blog_path(@blog), method: :delete, class: "delete" %>
+    <% end %>
+  </div>
 </div>
