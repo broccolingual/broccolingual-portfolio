@@ -1,3 +1,56 @@
 // Place all the styles related to the Blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-table {
+  width: 100%;
+
+  input[type="submit"],
+  input[type="text"],
+  select,
+  textarea,
+  button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 0.2em;
+    resize: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #ccc;
+  }
+
+  #blog_title {
+    font-size: 20px;
+  }
+
+  #blog_body {
+    font-size: 16px;
+    min-height: 360px;
+  }
+}
+
+.btn-submit {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 0.5em;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #9acd32;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

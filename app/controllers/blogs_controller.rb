@@ -26,9 +26,9 @@ class BlogsController < ApplicationController
   end
 
   def update
-    blog = Blog.find(params[:id])
-    if blog.update(blog_params)
-      redirect_to blog_path(blog)
+    @blog = Blog.find(params[:id])
+    if @blog.update(blog_params)
+      redirect_to blog_path(@blog)
     else
       render :edit
     end

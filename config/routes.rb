@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'homes#top'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-  resources :blogs, only: [:new, :create, :edit, :update, :show, :destory]
+  get 'homes/about'
+  get 'homes/contact'
+  
+  devise_for :users
+  resources :blogs, only: [:new, :create, :edit, :update, :show, :destroy]
 end
