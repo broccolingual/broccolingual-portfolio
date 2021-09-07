@@ -21,3 +21,20 @@
     </div>
   </div>
 </header>
+<% if user_signed_in? && current_user.admin? %>
+  <div class="admin-notice">
+    <div class="container">
+      <p>Adminアカウントでログイン中</p>
+      <div class="login-menu">
+        <ul>
+          <li>
+            <%= link_to '投稿フォーム', new_blog_path %>
+          </li>
+          <li>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>

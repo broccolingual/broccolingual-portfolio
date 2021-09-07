@@ -122,6 +122,29 @@ header {
   }
 }
 
+.admin-notice {
+  background-color: pink;
+
+  .container {
+    color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .login-menu {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}
+
 footer {
   position: absolute;
   bottom: 0;
