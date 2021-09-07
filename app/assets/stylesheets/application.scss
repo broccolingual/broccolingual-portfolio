@@ -205,6 +205,54 @@ footer {
   }
 }
 
+.devise-form {
+  max-width: 300px;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .field {
+    margin-bottom: 8px;
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: #ccc solid 1px;
+      border-radius: 24px;
+    }
+  }
+
+  .actions {
+    margin-bottom: 8px;
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: #ccc solid 1px;
+      border-radius: 24px;
+      color: white;
+      background-color: #9acd32;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: normal;
+      word-wrap: break-word;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  a {
+    margin-bottom: 4px;
+  }
+}
+
 .article {
   width: 100%;
   padding: 1em;

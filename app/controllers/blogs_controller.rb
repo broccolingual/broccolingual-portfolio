@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :if_admin, only: [:new, :create, :edit, :update, :destroy]
+
   def new
     @blog = Blog.new
   end
@@ -41,6 +43,10 @@ class BlogsController < ApplicationController
   end
 
   private
+
+  def if_admin
+    redirect_to root_path unless current_user.admin?
+  end
 
   def blog_params
     params.require(:blog).permit(:title, :body)
